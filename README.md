@@ -30,6 +30,9 @@ Cannabinoid inheritance first proposed [one locus, two alleles](https://www.gene
 
 Only 45 samples in the dataset using StrainSEEK V2 that have cannabinoid data and a linked vcf file. If including StrainSEEK V1 and StrainSEEK V2 vcf file, then there are 204 samples. The SNPs would have to be limited to what is available in StrainSEEK V1.
 
+#### Training Population Representative
+Selections shoud be closely related to training population.
+
 #### SNP Density
 * Linkage disequilibrium
 
@@ -38,4 +41,17 @@ Only 45 samples in the dataset using StrainSEEK V2 that have cannabinoid data an
 * Phylos
 * Lynch
 * Sawler
+
+## Genomic Selection
+
+### Methods
+
+* RR-BLUP - assume normal distribution of SNP effects
+* BayesA - assume prior distribution of effects 
+* BayesB - assume some SNP effects are zero
+* Nonparametric - machine learning random forest / neural net
+
+### GEBV Accuracy 
+
+[training population size, narrow-sense heritability, independent loci affecting trait](https://link.springer.com/article/10.1007/s00122-018-3270-8)
 
