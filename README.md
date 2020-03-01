@@ -27,6 +27,7 @@ A subset of the samples in Kannnapedia contain the following chemotype data:
 #### Training Population Size
 
 #### SNP Density
+* Linkage disequilibrium
 
 ### Other Datasets
 
