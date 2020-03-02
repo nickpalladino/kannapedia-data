@@ -24,9 +24,6 @@ colnames(h1) = cols
 colnames(h2) = cols
 colnames(h3) = cols
 
-#combined <- merge(h1, h2, h3, by="population_size")
-#combined <- reshape2::melt(combined, id.var='population_size')
-
 combined <- h1 %>%  mutate(Heritability = 'h^2=0.1') %>%
   bind_rows(h2 %>% mutate(Heritability = 'h^2=0.5')) %>%
   bind_rows(h3 %>% mutate(Heritability = 'h^2=0.9'))
