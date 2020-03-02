@@ -57,3 +57,5 @@ Selections shoud be closely related to training population.
 
 [Analytical method](https://sci-hub.tw/https://www.nature.com/articles/nrg2575) for predicting the accuracy of genomic selection assuming that all SNPs have an effect and these effects are normally distributed. If the SNP effects are not normally distributed, with some large effects and many SNPs with no effect, the size of the population required will be smaller.
 
+
+![GEBV Accuracy Plot](images/gebv_accuracy.jpg?raw=true "GEBV Accuracy")
