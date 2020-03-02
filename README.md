@@ -55,3 +55,5 @@ Selections shoud be closely related to training population.
 
 [training population size, narrow-sense heritability, independent loci affecting trait](https://link.springer.com/article/10.1007/s00122-018-3270-8)
 
+[Analytical method](https://sci-hub.tw/https://www.nature.com/articles/nrg2575) for predicting the accuracy of genomic selection assuming that all SNPs have an effect and these effects are normally distributed. If the SNP effects are not normally distributed, with some large effects and many SNPs with no effect, the size of the population required will be smaller.
+
