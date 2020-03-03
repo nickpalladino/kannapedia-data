@@ -12,7 +12,10 @@ StrainSEEK V2: 360
 
 ### Genotypes
 
-StrainSEEK V2 has 25,000-50,000 SNPs across the genome with increased density on chemotype associated genes. SNPs with higher information content in StrainSEEK V1 were carried over into StrainSEEK V2 for backwards compatibility [[1]](https://www.medicinalgenomics.com/new-data-visualizations-kannapedia/). StrainSEEK V1 SNPs were mapped against the canSat3 reference genome whereas StrainSEEK V2 SNPs were mapped against the Jamaican Lion reference genome. 
+The [StrainSEEK V2](https://www.medicinalgenomics.com/strainseek-strain-identification-and-registration/) assay sequences more than 3.5 million bases (Mb) across thousands of high-value targets, including 29 cannabinoid and terpene synthase genes as well as several genes for seed production and sex determination. Also included in the assay are 30,000 SNP’s that can be used to create high-density SNP maps for marker-assisted breeding. StrainSEEK V2 uses a [targeted enrichment](https://www.kannapedia.net/cannabis-phylotree/) approach to sequence the target areas of the genome. SNPs with higher information content in StrainSEEK V1 were carried over into StrainSEEK V2 for [backwards compatibility](https://www.medicinalgenomics.com/new-data-visualizations-kannapedia/). StrainSEEK V1 SNPs were mapped against the canSat3 reference genome whereas StrainSEEK V2 SNPs were mapped against the Jamaican Lion reference genome.
+
+The image below shows the number of SNPs and indels across 40 genomes mapped to the Jamaican Lion reference genome. [The most genetically distance hemp sample averaged 17 million SNPs whereas closer relatives averaged 12.8 million SNPs](https://www.biorxiv.org/content/10.1101/2020.01.03.894428v1.full).
+![Cannabis SNPs](https://www.biorxiv.org/content/biorxiv/early/2020/01/05/2020.01.03.894428/F5.large.jpg?width=800&height=600&carousel=1)
 
 ### Phenotypes
 
