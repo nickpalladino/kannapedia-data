@@ -17,6 +17,8 @@ The [StrainSEEK V2](https://www.medicinalgenomics.com/strainseek-strain-identifi
 The image below shows the number of SNPs and indels across 40 genomes mapped to the Jamaican Lion reference genome. [The most genetically distance hemp sample averaged 17 million SNPs whereas closer relatives averaged 12.8 million SNPs](https://www.biorxiv.org/content/10.1101/2020.01.03.894428v1.full).
 ![Cannabis SNPs](https://www.biorxiv.org/content/biorxiv/early/2020/01/05/2020.01.03.894428/F5.large.jpg?width=800&height=600&carousel=1)
 
+The density of SNPs across the genome in StrainSEEK V2 needs to be considered. It has a subset of cannabis SNPs and it is unclear if there is even spacing across the genome even if more sparse. Linkage disequilibrium also needs to be considered. Machine learning methods have been [successfully used](https://www.frontiersin.org/articles/10.3389/fgene.2018.00237/full) for selecting subsets of SNPs from a whole SNP panel for predicting GEBV. This could be a viable option especially since we'd be predicting cannabinoid and terpene traits that have known coverage in the assay.
+
 ### Phenotypes
 
 A subset of the samples in Kannnapedia contain the following chemotype data:
