@@ -21,6 +21,10 @@ The density of SNPs across the genome in StrainSEEK V2 needs to be considered. I
 
 If it turns out that the StrainSEEK data is useful from predicting chemotype GEBV with good accuracy, there are issues with using it in a breeding program to overcome. [It currently costs $569.05 for one sample and takes 6 weeks to process](http://store.medicinalgenomics.com/home/Strain-Identification-and-Registration/StrainSEEK-cannabis-and-hemp-strain-identification-3-megabases.html). These are not viable options for cost or time. [A SNP chip](https://www.medicinalgenomics.com/eurofins-scientific-medicinal-genomics-partner-on-worlds-most-comprehensive-informative-cannabis-snp-chip/) has been announced for release this year that will contain SNPs from StrainSEEK. This should result in a significant cost and time reduction that could make it's use viable in a breeding program. It remains to be seen  which of the SNPs from StrainSEEK will be present on the SNP chip.
 
+#### Data Format
+
+A VCF file of variants against the reference genome is included as well as a fastq files of the raw sequencing data. The Jamaican Lion reference genome is made up of 387 contigs. [Chromosomes have not yet been called due to them being very similar in size and deletions could result in the wrong call](https://www.youtube.com/watch?v=uTgvw_O-g84). The VCF calls are therefore positioned with respect to the contigs.
+
 ### Phenotypes
 
 A subset of the samples in Kannnapedia contain the following chemotype data:
