@@ -12,7 +12,18 @@ StrainSEEK V2: 360
 
 ### Genotypes
 
-StrainSEEK V2 has 25,000-50,000 SNPs across the genome with increased density on chemotype associated genes. SNPs with higher information content in StrainSEEK V1 were carried over into StrainSEEK V2 for backwards compatibility [[1]](https://www.medicinalgenomics.com/new-data-visualizations-kannapedia/). StrainSEEK V1 SNPs were mapped against the canSat3 reference genome whereas StrainSEEK V2 SNPs were mapped against the Jamaican Lion reference genome. 
+The [StrainSEEK V2](https://www.medicinalgenomics.com/strainseek-strain-identification-and-registration/) assay sequences more than 3.5 million bases (Mb) across thousands of high-value targets, including 29 cannabinoid and terpene synthase genes as well as several genes for seed production and sex determination. Also included in the assay are 30,000 SNP’s that can be used to create high-density SNP maps for marker-assisted breeding. StrainSEEK V2 uses a [targeted enrichment](https://www.kannapedia.net/cannabis-phylotree/) approach to sequence the target areas of the genome. SNPs with higher information content in StrainSEEK V1 were carried over into StrainSEEK V2 for [backwards compatibility](https://www.medicinalgenomics.com/new-data-visualizations-kannapedia/). StrainSEEK V1 SNPs were mapped against the canSat3 reference genome whereas StrainSEEK V2 SNPs were mapped against the Jamaican Lion reference genome.
+
+The image below shows the number of SNPs and indels across 40 genomes mapped to the Jamaican Lion reference genome. [The most genetically distant hemp sample averaged 17 million SNPs whereas closer relatives averaged 12.8 million SNPs](https://www.biorxiv.org/content/10.1101/2020.01.03.894428v1.full).
+![Cannabis SNPs](https://www.biorxiv.org/content/biorxiv/early/2020/01/05/2020.01.03.894428/F5.large.jpg?width=800&height=600&carousel=1)
+
+The density of SNPs across the genome in StrainSEEK V2 needs to be considered. It has a subset of cannabis SNPs and it is unclear if there is even spacing across the genome even if more sparse. Linkage disequilibrium also needs to be considered. Machine learning methods have been [successfully used](https://www.frontiersin.org/articles/10.3389/fgene.2018.00237/full) for selecting subsets of SNPs from a whole SNP panel for predicting GEBV. This could be a viable option especially since we'd be predicting cannabinoid and terpene traits that have known coverage in the assay.
+
+If it turns out that the StrainSEEK data is useful from predicting chemotype GEBV with good accuracy, there are issues with using it in a breeding program to overcome. [It currently costs $569.05 for one sample and takes 6 weeks to process](http://store.medicinalgenomics.com/home/Strain-Identification-and-Registration/StrainSEEK-cannabis-and-hemp-strain-identification-3-megabases.html). These are not viable options for cost or time. [A SNP chip](https://www.medicinalgenomics.com/eurofins-scientific-medicinal-genomics-partner-on-worlds-most-comprehensive-informative-cannabis-snp-chip/) has been announced for release this year that will contain SNPs from StrainSEEK. This should result in a significant cost and time reduction that could make it's use viable in a breeding program. It remains to be seen  which of the SNPs from StrainSEEK will be present on the SNP chip.
+
+#### Data Format
+
+A VCF file of variants against the reference genome is included as well as a fastq files of the raw sequencing data. The Jamaican Lion reference genome is made up of 387 contigs. [Chromosomes have not yet been called due to them being very similar in size and deletions could result in the wrong call](https://www.youtube.com/watch?v=uTgvw_O-g84). The VCF calls are therefore positioned with respect to the contigs.
 
 ### Phenotypes
 
