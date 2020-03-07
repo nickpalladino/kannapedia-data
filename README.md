@@ -23,7 +23,19 @@ If it turns out that the StrainSEEK data is useful from predicting chemotype GEB
 
 #### Data Format
 
-A VCF file of variants against the reference genome is included as well as a fastq files of the raw sequencing data. The Jamaican Lion reference genome is made up of 387 contigs. [Chromosomes have not yet been called due to them being very similar in size and deletions could result in the wrong call](https://www.youtube.com/watch?v=uTgvw_O-g84). The VCF calls are therefore positioned with respect to the contigs.
+A GVCF file of variants against the reference genome is included as well as a fastq files of the raw sequencing data. The Jamaican Lion reference genome is made up of 387 contigs. [Chromosomes have not yet been called due to them being very similar in size and deletions could result in the wrong call](https://www.youtube.com/watch?v=uTgvw_O-g84). The GVCF calls are therefore positioned with respect to the contigs. The GVCF files were generated with the Illumina DRAGEN tool. The block below shows the commandline parameters used to generate one of the GVCF files:
+
+> DRAGENCommandLine=<ID=dragen,Version="SW: 05.011.281.3.2.5, HW: 05.011.281",Date="Fri May 10 16:02:3
+6 UTC 2019",CommandLineOptions="-r /ephemeral/JLion_V6_7M_polarstar_purged/ --output-directory /Dragen
+/SS2/Dragen_calls --output-file-prefix RSP10105 -1 s3://mgcdata/SS2/runs/COMBD_RSP10105/RSP10105_COMBD
+_20180517_R1_001.fastq.gz -2 s3://mgcdata/SS2/runs/COMBD_RSP10105/RSP10105_COMBD_20180517_R2_001.fastq
+.gz --intermediate-results-dir /ephemeral/tmp --enable-variant-caller true --vc-sample-name RSP10105 -
+-vc-emit-ref-confidence GVCF --enable-duplicate-marking true --enable-map-align-output true --RGSM RSP
+10105 --RGID RSP10105">
+
+As shown in the image below, GVCF files are an intermediate format. These represent the variant calls. From these files, you then can do a joint-call genotyping to generate the SNPs.
+
+![GCVF Workflow](https://us.v-cdn.net/5019796/uploads/editor/1l/5bzcah5uaksr.png)
 
 ### Phenotypes
 
