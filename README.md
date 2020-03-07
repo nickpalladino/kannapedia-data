@@ -37,6 +37,8 @@ As shown in the image below, GVCF files are an intermediate format. These repres
 
 ![GCVF Workflow](https://us.v-cdn.net/5019796/uploads/editor/1l/5bzcah5uaksr.png)
 
+DRAGEN runs on special hardware utilizing FPGAs which limits it's availability being primarily available through Illumina BaseSpace. Although faster, it is proprietary and more difficult to access compared to open source general purpose implementations like GATK. [There is an effort called DRAGEN-GATK to allow samples analyzed in either pipeline to be combined without worrying about batch effects](https://gatk.broadinstitute.org/hc/en-us/articles/360039984151-DRAGEN-GATK-Update-Let-s-get-more-specific). Since all of the GVCFs are generated with DRAGEN, as long as GATK doesn't have issues with the output, it should be possible to use [GATK GenotypeGVCFs](https://gatk.broadinstitute.org/hc/en-us/articles/360035889971--How-to-Consolidate-GVCFs-for-joint-calling-with-GenotypeGVCFs) to generate a VCF from the GVCFs. Otherwise, all of the samples would have to be reprocessed from the raw sequencing data in GATK.
+
 ### Phenotypes
 
 A subset of the samples in Kannnapedia contain the following chemotype data:
