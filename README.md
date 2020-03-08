@@ -58,6 +58,14 @@ After this, the reference sequence is prepared for running `CombineGVCFs`. In th
 gatk CombineGVCFs -R ../Cannabis_renamed.fasta --variant RSP10551_blockchain.vcf.gz --variant RSP10105_blockchain.vcf.gz -O combined.vcf.gz
 ```
 
+After this, joint calling can be performed:
+
+```
+gatk GenotypeGVCFs -R ../Cannabis_renamed.fasta -V combined.vcf.gz -O test.vcf
+```
+
+The resulting vcf file will contain SNPs and INDELs for the samples.
+
 ### Phenotypes
 
 A subset of the samples in Kannnapedia contain the following chemotype data:
