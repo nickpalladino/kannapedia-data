@@ -39,6 +39,25 @@ As shown in the image below, GVCF files are an intermediate format. These repres
 
 DRAGEN runs on special hardware utilizing FPGAs which limits it's availability being primarily available through Illumina BaseSpace. Although faster, it is proprietary and more difficult to access compared to open source general purpose implementations like GATK. [There is an effort called DRAGEN-GATK to allow samples analyzed in either pipeline to be combined without worrying about batch effects](https://gatk.broadinstitute.org/hc/en-us/articles/360039984151-DRAGEN-GATK-Update-Let-s-get-more-specific). Since all of the GVCFs are generated with DRAGEN, as long as GATK doesn't have issues with the output, it should be possible to use [GATK GenotypeGVCFs](https://gatk.broadinstitute.org/hc/en-us/articles/360035889971--How-to-Consolidate-GVCFs-for-joint-calling-with-GenotypeGVCFs) to generate a VCF from the GVCFs. Otherwise, all of the samples would have to be reprocessed from the raw sequencing data in GATK.
 
+First, the GVCF files need to be consolidated into a single file. There are two options in GATK, either `GenomicsDBImport` or `CombineGVCFs`. `GenomicsDBImport` is recommended but I haven't figured out how to use the intrevals parameter yet so I went with `CombineGVCFs`. In order to run `CombineGVCFs`, the reference genome used in variant calling for the GVCFs is needed. The  reference fasta is available [here](https://genomevolution.org/coge/api/v1/genomes/55184/sequence). The file comes with a .faa extension that had to be renamed to .fasta to work with the GATK tools. Also, the contig names in the fasta file were named as `lcl|contig` whereas the GVCF file names were just`contig`. A new fasta file with renamed contigs was generated with the following command:
+
+```
+sed 's/lcl|contig/contig/g' Cannabis_sativa_Jamaican_Lion.fasta > Cannabis_renamed.fasta
+```
+
+Next index and dictionary files had to be generated for the reference sequence using the following commands: 
+
+```
+samtools faidx Cannabis_renamed.fasta
+
+gatk CreateSequenceDictionary -R Cannabis_renamed.fasta
+```
+After this, the reference sequence is prepared for running `CombineGVCFs`. In this case, just two of the GVCF files are being combined.
+
+```
+gatk CombineGVCFs -R ../Cannabis_renamed.fasta --variant RSP10551_blockchain.vcf.gz --variant RSP10105_blockchain.vcf.gz -O combined.vcf.gz
+```
+
 ### Phenotypes
 
 A subset of the samples in Kannnapedia contain the following chemotype data:
